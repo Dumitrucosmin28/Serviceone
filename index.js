@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 5000
 
 
 express()
+/*
 .get('/', function (req, res,) {
     client.query('SELECT * FROM Employee ', function (err, result) {
         if (err) {
@@ -20,7 +21,8 @@ express()
         y
         res.status(200).json(result.rows);
     });
-})
+})*/
+.get('/', (req, res) => res.send('Got a Get request'))
 .post('/', (req, res) => res.send('Got a POST request'))
 .delete('/', (req, res) => res.send('Got a Delete request'))
 .put('/', (req, res) => res.send('Got a Put request'))
