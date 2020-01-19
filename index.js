@@ -8,6 +8,7 @@ let users = [];
 
 
 express()
+.get('/test', (req, res) => res.send('Got a test request'))
 .get('/', (req, res) => res.send('Got a Get request'))
 .get('/users', function(req, res) {
     axios.get('https://service-2.herokuapp.com/users')
